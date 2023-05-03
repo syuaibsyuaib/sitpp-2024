@@ -75,17 +75,19 @@ $('body').prepend(modalLoading)
 $('#loadingModal').modal('show')
 
 let nip = ($('.info p').text()).match(/\d+/)[0]
-let gs = 'https://script.google.com/macros/s/AKfycbxN3_x0sEclDesQ_kPxDKPlCSJhhlWCRyog2iFg0CqSdV6CYXB2vGCtlqsUDmnDBW5S/exec'
+let gs = 'https://script.google.com/macros/s/AKfycbxOPkfvZceJ4b61SgZHEe_hDUb6lDAg7UkDvj-2P8OEqc5clF4tjD2PQQp7jKSqFb0M/exec'
 let nipStafSekolah = '', klasifikasi = ''
 let isi2 = {}, isi3 = {}
 let proto = location.protocol == 'http:' ? 'http:' : 'https:'
 
 // let simpanKlasifikasi = new Promise((resolve, rejecet) => {
+//https://kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
 fetch(`${proto}//kinerja2023.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
   .then(res => {
     return res.text()
   })
   .then(resp => {
+  //id_opmt_kinerja_utama_detail
     $($($(resp)[0]).find('#id_opmt_kinerja_utama_detail option')).each(function (e, h) {
       isi2[$(h).text()] = $(h).val()
     })
