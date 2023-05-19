@@ -771,6 +771,11 @@ function tambahbaru() {
     })
     .then(resp => {
       let hasil = JSON.parse(resp)
+      if(hasil.pesan == 'sheet belum ada'){
+        $('#loadingModal').modal('hide')
+        alert('SHEET BELUM ADA')
+        return false
+      }
       console.log(hasil)
       hasil.forEach(bkn => {
         fetch(urlTambah, {
