@@ -1,4 +1,4 @@
-//$('body').append('<script src="https://cdn.jsdelivr.net/gh/syuaibsyuaib/kinerja2023@v0.0.1b/kinerjav2hack.js"></script>')
+//$('body').append('<script src="https://cdn.jsdelivr.net/gh/syuaibsyuaib/sitpp@v0.0.1b/kinerjav2hack.js"></script>')
 
 /*
 
@@ -75,15 +75,15 @@ $('body').prepend(modalLoading)
 $('#loadingModal').modal('show')
 
 let nip = ($('.info p').text()).match(/\d+/)[0]
-let gs = 'https://script.google.com/macros/s/AKfycbxOPkfvZceJ4b61SgZHEe_hDUb6lDAg7UkDvj-2P8OEqc5clF4tjD2PQQp7jKSqFb0M/exec'
+let gs = 'https://script.google.com/macros/s/AKfycbzM8w_y9iXCHjSsh8pbjTXMy3fH-yDNDf0RrxmJzuAQJdQ2w3uiNNYmHWn0Xf3BgHv0/exec'
 let nipStafSekolah = '', klasifikasi = ''
 let isi2 = {}, isi3 = {}
 let proto = location.protocol == 'http:' ? 'http:' : 'https:'
 
 // let simpanKlasifikasi = new Promise((resolve, rejecet) => {
-//https://kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
+//https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
 
-fetch(`${proto}//kinerja2023.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
+fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
   .then(res => {
     return res.text()
   })
@@ -274,8 +274,8 @@ function kinerjahack(mode) {
 }
 
 function kirim(parmTgl, parmAktifitas, parmKuantitas, parmDd, parmJamMulai, parmJamSelesai, parmKinerja, parmIdKegiatan, parmThnAktif, parmBlnAktif, parmBanyakRow, parmResetRow, parmNip) {
-// https://kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
-  let urlTambah = `${proto}//kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30`
+// https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
+  let urlTambah = `${proto}//sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30`
 
   let jamMT = "08:30"
   let jamST = "12:00"
@@ -367,10 +367,10 @@ function tambahbaru() {
     return
   }
 
-  let urlTambah = `${proto}//kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30`
+  let urlTambah = `${proto}//sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30`
 
   // if (location.protocol == 'https:') {
-  //   urlTambah = "https://kinerja2023.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30"
+  //   urlTambah = "https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30"
   // }
 
   $('#loadingModal').modal('show')
