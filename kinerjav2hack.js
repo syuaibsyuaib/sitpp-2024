@@ -125,7 +125,13 @@ fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
         $('#tengah table:eq(0) td').eq(4).remove()
         $('#loadingModal').modal('hide')
         // resolve(resp)
+      }).catch(err => {
+        console.log(err)
+        alert(err)
       })
+  }).catch(err => {
+    console.log(err)
+    alert(err)
   })
 
 
@@ -274,7 +280,7 @@ function kinerjahack(mode) {
 }
 
 function kirim(parmTgl, parmAktifitas, parmKuantitas, parmDd, parmJamMulai, parmJamSelesai, parmKinerja, parmIdKegiatan, parmThnAktif, parmBlnAktif, parmBanyakRow, parmResetRow, parmNip) {
-// https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
+  // https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
   let urlTambah = `${proto}//sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30`
 
   let jamMT = "08:30"
@@ -292,16 +298,16 @@ function kirim(parmTgl, parmAktifitas, parmKuantitas, parmDd, parmJamMulai, parm
       }
     })
   }
- 
+
 
   // { "id_opmt_aktifitas_30": "0", 
-  // "tanggal": "2023-06-06", 
-  // "aktifitas": "ggggg", 
+  // "tanggal": "2024-01-31", 
+  // "aktifitas": "Melayani masyarakat dalam hal surat pengantar izin keramaian", 
   // "kuantitas": "1", 
-  // "id_dd_kuantitas": "17", 
-  // "jam_mulai": "00:00", 
-  // "jam_selesai": "00:00", 
-  // "id_opmt_kinerja_utama_detail": "27046" }
+  // "id_dd_kuantitas": "80", 
+  // "jam_mulai": "07:30", 
+  // "jam_selesai": "16:00", 
+  // "id_opmt_kinerja_utama_detail": "6463" }
 
   let payloadTambah = {
     "id_opmt_aktifitas_30": "0",
