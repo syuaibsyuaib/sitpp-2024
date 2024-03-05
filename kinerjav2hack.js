@@ -128,10 +128,12 @@ fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
       }).catch(err => {
         console.log(err)
         alert(err)
+        $('#loadingModal').modal('hide')
       })
   }).catch(err => {
     console.log(err)
     alert(err)
+    $('#loadingModal').modal('hide')
   })
 
 
