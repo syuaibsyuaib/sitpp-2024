@@ -88,8 +88,7 @@ fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
     return res.text()
   })
   .then(resp => {
-    console.log(resp)
-    $($($(resp)[0]).find('#id_opmt_kinerja_utama_detail option')).each(function (e, h) {
+    $(resp).find('#id_opmt_kinerja_utama_detail option').each(function (e, h) {
       isi2[$(h).text()] = $(h).val()
     })
   })
@@ -100,7 +99,7 @@ fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
   })
   .then(resppp => {
     isi3["nip"] = nip
-    console.log(isi3)
+    console.log(isi3, 'isi3')
     fetch(gs, {
       method: 'POST',
       body: JSON.stringify(isi3)
