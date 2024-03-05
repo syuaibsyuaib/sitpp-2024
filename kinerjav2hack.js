@@ -82,13 +82,13 @@ let proto = location.protocol == 'http:' ? 'http:' : 'https:'
 
 // let simpanKlasifikasi = new Promise((resolve, rejecet) => {
 //https://sitpp.pareparekota.go.id/c_aktifitas/aksi_tambah_skp_30
-
+console.log(proto)
 fetch(`${proto}//sitpp.pareparekota.go.id/c_aktifitas/tambah_skp_30`)
   .then(res => {
     return res.text()
   })
   .then(resp => {
-    //id_opmt_kinerja_utama_detail
+    console.log(resp)
     $($($(resp)[0]).find('#id_opmt_kinerja_utama_detail option')).each(function (e, h) {
       isi2[$(h).text()] = $(h).val()
     })
